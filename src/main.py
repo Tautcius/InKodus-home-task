@@ -8,4 +8,4 @@ async def root():
 
 @app.get("/hello")
 async def root():
-    return {"World."}
+    return {"Hello world message."}
