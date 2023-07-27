@@ -2,6 +2,13 @@
 
 
 
+## v0.2.15 (2023-07-27)
+
+### Fix
+
+* fix: lowercase ([`0acd2d0`](https://github.com/Tautcius/InKodus-home-task/commit/0acd2d0cfc66e3b201fc480a86d98e231b7437e7))
+
+
 ## v0.2.14 (2023-07-27)
 
 ### Fix
