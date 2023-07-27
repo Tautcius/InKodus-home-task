@@ -2,6 +2,13 @@
 
 
 
+## v0.0.2 (2023-07-27)
+
+### Fix
+
+* fix: testing sem ver ([`a4eeb6b`](https://github.com/Tautcius/InKodus-home-task/commit/a4eeb6befc777cc9692f3466c5ce5df764e1618d))
+
+
 ## v0.0.1 (2023-07-27)
 
 ### Fix
