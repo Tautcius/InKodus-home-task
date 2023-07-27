@@ -2,6 +2,23 @@
 
 
 
+## v0.2.0 (2023-07-27)
+
+### Feature
+
+* feat: added docker build and push action
+
+Docker build ([`30e86cd`](https://github.com/Tautcius/InKodus-home-task/commit/30e86cd086172239f7944edc6db468152179a0a5))
+
+### Unknown
+
+* add  build and push action ([`56701fe`](https://github.com/Tautcius/InKodus-home-task/commit/56701fed62d614fe1b25a8da9163508918cb39ae))
+
+* Merge pull request #1 from Tautcius/main
+
+fix: tests action is working ([`2b3d292`](https://github.com/Tautcius/InKodus-home-task/commit/2b3d292045b19d7f4f1867cfe8432c1b2257503c))
+
+
 ## v0.1.1 (2023-07-27)
 
 ### Fix
