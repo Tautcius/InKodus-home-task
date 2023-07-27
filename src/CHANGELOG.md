@@ -2,6 +2,15 @@
 
 
 
+## v0.2.9 (2023-07-27)
+
+### Fix
+
+* fix: action trigger fixed ([`92b8cb1`](https://github.com/Tautcius/InKodus-home-task/commit/92b8cb18062ff32438a6859e781d14715896cadf))
+
+* fix: test with one action ([`6ca0d1f`](https://github.com/Tautcius/InKodus-home-task/commit/6ca0d1fc4e8f4276e39f306b28c97e7a15aface6))
+
+
 ## v0.2.8 (2023-07-27)
 
 ### Fix
