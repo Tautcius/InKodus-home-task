@@ -2,6 +2,13 @@
 
 
 
+## v0.2.5 (2023-07-27)
+
+### Fix
+
+* fix: master to main ([`c9cac07`](https://github.com/Tautcius/InKodus-home-task/commit/c9cac078b79169e42bb000ca047b2284e7309478))
+
+
 ## v0.2.4 (2023-07-27)
 
 ### Fix
