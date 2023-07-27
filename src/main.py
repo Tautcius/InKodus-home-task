@@ -9,3 +9,5 @@ async def root():
 @app.get("/hello")
 async def hello():
     return {"msg":"Hello World"}
+
+print('test line')
