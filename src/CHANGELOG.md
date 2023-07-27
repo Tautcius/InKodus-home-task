@@ -6,6 +6,10 @@
 
 ### Fix
 
+* fix: test ([`84e9b9d`](https://github.com/Tautcius/InKodus-home-task/commit/84e9b9d7fcd4b8b2081e40c5594fb8b02414e1a9))
+
+* fix: test action ([`c2a2bd6`](https://github.com/Tautcius/InKodus-home-task/commit/c2a2bd669f4ac30444af6f3d3e5cac11314d1c3e))
+
 * fix: added premissions ([`f84006f`](https://github.com/Tautcius/InKodus-home-task/commit/f84006fba989f66ff6b034aa94efa626a26739ba))
 
 * fix: change env name ([`3c7bfc8`](https://github.com/Tautcius/InKodus-home-task/commit/3c7bfc80d7688e7d621ea4e5215061e74cc749ed))
