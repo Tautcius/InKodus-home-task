@@ -2,6 +2,13 @@
 
 
 
+## v0.2.4 (2023-07-27)
+
+### Fix
+
+* fix: changed branching on docker build pipeline ([`dc84fb4`](https://github.com/Tautcius/InKodus-home-task/commit/dc84fb47f5a144c13c0ac338c6ee122a79e398d2))
+
+
 ## v0.2.3 (2023-07-27)
 
 ### Fix
