@@ -2,6 +2,13 @@
 
 
 
+## v0.3.2 (2023-07-27)
+
+### Fix
+
+* fix: change taging ([`597f095`](https://github.com/Tautcius/InKodus-home-task/commit/597f09551981e59044a5314667efe1d609ca028f))
+
+
 ## v0.3.1 (2023-07-27)
 
 ### Fix
