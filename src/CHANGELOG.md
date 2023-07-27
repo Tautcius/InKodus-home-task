@@ -2,6 +2,13 @@
 
 
 
+## v0.2.2 (2023-07-27)
+
+### Fix
+
+* fix: changed build branch and tags ([`8c357e7`](https://github.com/Tautcius/InKodus-home-task/commit/8c357e7cbf0f7fad4ef96e48de96cde4e37764e2))
+
+
 ## v0.2.1 (2023-07-27)
 
 ### Fix
