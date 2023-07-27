@@ -2,6 +2,13 @@
 
 
 
+## v0.2.3 (2023-07-27)
+
+### Fix
+
+* fix: changed tagging ([`f6a5d0f`](https://github.com/Tautcius/InKodus-home-task/commit/f6a5d0f7ffca9ff9d039f48a35b0e4794cf63a86))
+
+
 ## v0.2.2 (2023-07-27)
 
 ### Fix
