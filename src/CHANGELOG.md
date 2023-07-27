@@ -2,6 +2,13 @@
 
 
 
+## v0.3.0 (2023-07-27)
+
+### Feature
+
+* feat: added helm chart ([`2ef7c14`](https://github.com/Tautcius/InKodus-home-task/commit/2ef7c148d1ff337690d82d78d18d411604897296))
+
+
 ## v0.2.16 (2023-07-27)
 
 ### Fix
