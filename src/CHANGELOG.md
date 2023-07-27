@@ -2,6 +2,13 @@
 
 
 
+## v0.1.1 (2023-07-27)
+
+### Fix
+
+* fix: added test action ([`dd53f0f`](https://github.com/Tautcius/InKodus-home-task/commit/dd53f0f2c807d78401ca0e0a07d90e730c397426))
+
+
 ## v0.1.0 (2023-07-27)
 
 ### Feature
