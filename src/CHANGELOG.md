@@ -2,6 +2,13 @@
 
 
 
+## v0.2.16 (2023-07-27)
+
+### Fix
+
+* fix: added owner name ([`853df90`](https://github.com/Tautcius/InKodus-home-task/commit/853df90b92d92f00d6b3db41b55fd58304453316))
+
+
 ## v0.2.15 (2023-07-27)
 
 ### Fix
