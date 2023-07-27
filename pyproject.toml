@@ -5,7 +5,7 @@ commit_parser = "angular"
 logging_use_named_masks = false
 major_on_zero = true
 tag_format = "{version}"
-version_variables = ["setup.py:__version__"]
+version_variables = ["src:setup.py:__version__"]
 
 [tool.semantic_release.branches.main]
 match = "(main)"
@@ -46,7 +46,7 @@ type = "github"
 ignore_token_for_push = false
 
 [tool.semantic_release.remote.token]
-env = "GH_TOKEN"
+env = "GITHUB_TOKEN"
 
 [tool.semantic_release.publish]
 dist_glob_patterns = ["dist/*"]
