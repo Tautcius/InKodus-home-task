@@ -2,6 +2,13 @@
 
 
 
+## v0.2.14 (2023-07-27)
+
+### Fix
+
+* fix: typo ([`086f343`](https://github.com/Tautcius/InKodus-home-task/commit/086f343a1b5b23a9ce17c0914e2887de0174e533))
+
+
 ## v0.2.13 (2023-07-27)
 
 ### Fix
