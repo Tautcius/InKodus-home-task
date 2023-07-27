@@ -2,6 +2,13 @@
 
 
 
+## v0.2.6 (2023-07-27)
+
+### Fix
+
+* fix: build after semver ([`b0ae5a3`](https://github.com/Tautcius/InKodus-home-task/commit/b0ae5a3c6ec2c29a92cf64eb052cdc9f10f33b6f))
+
+
 ## v0.2.5 (2023-07-27)
 
 ### Fix
