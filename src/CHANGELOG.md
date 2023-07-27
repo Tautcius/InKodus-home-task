@@ -2,6 +2,15 @@
 
 
 
+## v0.2.1 (2023-07-27)
+
+### Fix
+
+* fix: typo in docker action ([`e372ee5`](https://github.com/Tautcius/InKodus-home-task/commit/e372ee5515c1ef12f7e2001be7cc79fc3fa07522))
+
+* fix: typo in docker pipeline ([`4597db0`](https://github.com/Tautcius/InKodus-home-task/commit/4597db01de38a9d96fff93c64de80b3ab117911a))
+
+
 ## v0.2.0 (2023-07-27)
 
 ### Feature
