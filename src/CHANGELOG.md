@@ -2,6 +2,13 @@
 
 
 
+## v0.1.0 (2023-07-27)
+
+### Feature
+
+* feat: added tests for app ([`b3d88d4`](https://github.com/Tautcius/InKodus-home-task/commit/b3d88d446e2951be0c38a41251ad83239db3a00d))
+
+
 ## v0.0.2 (2023-07-27)
 
 ### Fix
