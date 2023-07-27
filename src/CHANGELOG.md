@@ -2,6 +2,13 @@
 
 
 
+## v0.2.12 (2023-07-27)
+
+### Fix
+
+* fix: test build and push ([`b83e79f`](https://github.com/Tautcius/InKodus-home-task/commit/b83e79f86ae8e890fcb8f9e122ec260240f010a5))
+
+
 ## v0.2.11 (2023-07-27)
 
 ### Fix
