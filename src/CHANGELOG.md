@@ -2,6 +2,13 @@
 
 
 
+## v0.3.1 (2023-07-27)
+
+### Fix
+
+* fix: change realeaser version ([`0597018`](https://github.com/Tautcius/InKodus-home-task/commit/0597018ebde322c6c44690fe76330b5840a781a7))
+
+
 ## v0.3.0 (2023-07-27)
 
 ### Feature
