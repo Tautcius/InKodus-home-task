@@ -74,3 +74,14 @@ jobs:
             ${{ env.REGISTRY }}/${{ env.OWNER_NAME }}/${{ env.IMAGE_NAME }}:latest
             ${{ env.REGISTRY }}/${{ env.OWNER_NAME }}/${{ env.IMAGE_NAME }}:${{ needs.bump-version.outputs.version }}
           labels: ${{ steps.meta.outputs.labels }}
+  helm-rekease:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run chart version bump
+        uses: mittwald/bump-app-version-action@v1
+        with:
+          mode: "publish"
+          chartYaml: "./deploy/chart/Chart.yaml"
+        env:
+          GITHUB_TOKEN: "${{ secrets.githubToken }}"
+          HELM_REPO_PASSWORD: "${{ secrets.HELM_REPO_PASSWORD }}"
