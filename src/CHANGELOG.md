@@ -2,6 +2,17 @@
 
 
 
+## v0.3.10 (2023-07-29)
+
+### Fix
+
+* fix: test3 ([`0953a88`](https://github.com/Tautcius/InKodus-home-task/commit/0953a884cef269aeed3b5ae07752332750f001fc))
+
+### Unknown
+
+* test2 ([`54bb308`](https://github.com/Tautcius/InKodus-home-task/commit/54bb308742e2079cef91dafd6c8e2347ab1d798d))
+
+
 ## v0.3.9 (2023-07-29)
 
 ### Fix
