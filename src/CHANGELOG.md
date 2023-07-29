@@ -2,6 +2,13 @@
 
 
 
+## v0.3.17 (2023-07-29)
+
+### Fix
+
+* fix: doubling release ([`10e8d58`](https://github.com/Tautcius/InKodus-home-task/commit/10e8d588ba4dc0b3b476f498ed4d9de82df217e5))
+
+
 ## v0.3.16 (2023-07-29)
 
 ### Fix
