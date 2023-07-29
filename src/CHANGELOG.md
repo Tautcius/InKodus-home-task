@@ -2,6 +2,13 @@
 
 
 
+## v0.3.15 (2023-07-29)
+
+### Fix
+
+* fix: update actions ([`fa6fca9`](https://github.com/Tautcius/InKodus-home-task/commit/fa6fca95c2ca0a52e4b45935eab06f8dbfc0f4cc))
+
+
 ## v0.3.14 (2023-07-29)
 
 ### Fix
