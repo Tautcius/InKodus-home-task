@@ -2,6 +2,15 @@
 
 
 
+## v0.3.13 (2023-07-29)
+
+### Fix
+
+* fix: moved to helm ([`715a0e2`](https://github.com/Tautcius/InKodus-home-task/commit/715a0e2f80556faf725a2d645d3556adf81cdcc4))
+
+* fix: typo ([`379b2b7`](https://github.com/Tautcius/InKodus-home-task/commit/379b2b733d2cc4b7c8eef6e8aed7105d006cd207))
+
+
 ## v0.3.12 (2023-07-29)
 
 ### Fix
