@@ -2,6 +2,13 @@
 
 
 
+## v0.3.8 (2023-07-29)
+
+### Fix
+
+* fix: test chart releaser ([`0b158b0`](https://github.com/Tautcius/InKodus-home-task/commit/0b158b0a41201cfb03df0c6dd5cbaef945d0ce67))
+
+
 ## v0.3.7 (2023-07-29)
 
 ### Fix
