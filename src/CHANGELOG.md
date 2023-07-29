@@ -2,6 +2,13 @@
 
 
 
+## v0.3.12 (2023-07-29)
+
+### Fix
+
+* fix: add file patcher ([`b521e5c`](https://github.com/Tautcius/InKodus-home-task/commit/b521e5cb8be944b17db2654603b3c9c120e83e77))
+
+
 ## v0.3.11 (2023-07-29)
 
 ### Fix
