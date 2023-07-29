@@ -32,6 +32,16 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           directory: src
 
+      - name: Patch versions in helm chart file
+        uses: onlyutkarsh/patch-files-action@v1.0.1
+        with:
+          files: |
+            charts/inkodus-home-task/*.yaml
+          patch-syntax: |
+            = iamge/tag => ${{ steps.semver.outputs.version }}
+            = /appVersion => ${{ steps.semver.outputs.version }}
+            = /version => ${{ steps.semver.outputs.version }}
+
   build-and-push-image:
     if: needs.bump-version.outputs.isReleased == 'true'
     runs-on: ubuntu-latest
