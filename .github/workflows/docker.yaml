@@ -19,6 +19,7 @@ jobs:
       contents: write
     outputs:
       version: ${{ steps.semver.outputs.version }}
+      released: ${{ steps.semver.outputs.released }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -32,6 +33,7 @@ jobs:
           directory: src
 
   build-and-push-image:
+    if: ${{ needs.bump-version.outputs.release }} == 'true'
     runs-on: ubuntu-latest
     needs: bump-version
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
@@ -75,13 +77,14 @@ jobs:
             ${{ env.REGISTRY }}/${{ env.OWNER_NAME }}/${{ env.IMAGE_NAME }}:${{ needs.bump-version.outputs.version }}
           labels: ${{ steps.meta.outputs.labels }}
   helm-rekease:
+    if: ${{ needs.bump-version.outputs.release }} == 'true'
     runs-on: ubuntu-latest
+    needs: bump-version
     steps:
-      - name: Run chart version bump
-        uses: mittwald/bump-app-version-action@v1
-        with:
-          mode: "publish"
-          chartYaml: "./deploy/chart/Chart.yaml"
+      - name: Install Helm
+        uses: azure/setup-helm@v3
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.5.0
         env:
-          GITHUB_TOKEN: "${{ secrets.githubToken }}"
-          HELM_REPO_PASSWORD: "${{ secrets.HELM_REPO_PASSWORD }}"
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
