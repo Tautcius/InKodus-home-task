@@ -136,7 +136,7 @@ jobs:
           # rm -rf .cr-release-packages
           # mkdir -p .cr-release-packages
           helm package charts/${{ env.IMAGE_NAME }} --app-version=${VERSION} --version=${VERSION} --destination=./charts
-          tar --extract --file=${{ env.IMAGE_NAME }}-${VERSION}.tgz ${{ env.IMAGE_NAME }}/Chart.yaml
+          tar --extract --file=charts/${{ env.IMAGE_NAME }}-${VERSION}.tgz ${{ env.IMAGE_NAME }}/Chart.yaml
 
       - name: Run chart-releaser
         # switch back to helm/chart-releaser-action if this contribution is ever merged
