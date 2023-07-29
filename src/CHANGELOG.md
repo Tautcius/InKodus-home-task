@@ -2,6 +2,17 @@
 
 
 
+## v0.3.3 (2023-07-29)
+
+### Fix
+
+* fix: updated dockerfile ([`93c3df1`](https://github.com/Tautcius/InKodus-home-task/commit/93c3df1db2d5971bf32a114385c05b66fe90fa3a))
+
+### Unknown
+
+* changed helm chart path ([`3379696`](https://github.com/Tautcius/InKodus-home-task/commit/3379696fd79213e1f922caa32abbfeab91503919))
+
+
 ## v0.3.2 (2023-07-27)
 
 ### Fix
