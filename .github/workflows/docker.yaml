@@ -78,17 +78,17 @@ jobs:
             ${{ env.REGISTRY }}/${{ env.OWNER_NAME }}/${{ env.IMAGE_NAME }}:${{ needs.bump-version.outputs.version }}
           labels: ${{ steps.meta.outputs.labels }}
 
-      - name: Update Image Version in the related HelmChart values.yaml
-        uses: fjogeleit/yaml-update-action@main
-        with:
-          valueFile: "charts/inkodus-home-task/values.yaml"
-          propertyPath: "image.tag"
-          value: ${{ needs.bump-version.outputs.version }}
-          branch: main
-          # targetBranch: main
-          createPR: false
-          commitChange: true
-          message: "Update Image Version to ${{ needs.bump-version.outputs.version }}"
+      # - name: Update Image Version in the related HelmChart values.yaml
+      #   uses: fjogeleit/yaml-update-action@main
+      #   with:
+      #     valueFile: "charts/inkodus-home-task/values.yaml"
+      #     propertyPath: "image.tag"
+      #     value: ${{ needs.bump-version.outputs.version }}
+      #     branch: main
+      #     # targetBranch: main
+      #     createPR: false
+      #     commitChange: true
+      #     message: "Update Image Version to ${{ needs.bump-version.outputs.version }}"
 
   helm-rekease:
     if: needs.bump-version.outputs.isReleased == 'true'
@@ -104,13 +104,21 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Patch versions in helm chart file
-        uses: onlyutkarsh/patch-files-action@v1.0.1
+      - name: Update values.yaml
+        uses: fjogeleit/yaml-update-action@main
         with:
-          files: |
-            charts/inkodus-home-task/values.yaml
-          patch-syntax: |
-            = /image/tag => ${{ needs.bump-version.outputs.version }}
+          valueFile: "charts/inkodus-home-task/values.yaml"
+          propertyPath: "image.tag"
+          value: ${{ needs.bump-version.outputs.version }}
+          commitChange: false
+
+      # - name: Patch versions in helm chart file
+      #   uses: onlyutkarsh/patch-files-action@v1.0.1
+      #   with:
+      #     files: |
+      #       charts/inkodus-home-task/values.yaml
+      #     patch-syntax: |
+      #       = /image/tag => ${{ needs.bump-version.outputs.version }}
 
       - name: Configure Git
         run: |
