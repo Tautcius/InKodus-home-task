@@ -133,8 +133,9 @@ jobs:
       - name: custom packaging
         run: |
           VERSION=${{ needs.bump-version.outputs.version }}
-          # rm -rf .cr-release-packages
-          # mkdir -p .cr-release-packages
+          rm -rf .cr-release-packages
+          mkdir -p .cr-release-packages
+          helm package charts/${{ env.IMAGE_NAME }} --app-version=${VERSION} --version=${VERSION} --destination=.cr-release-packages
           helm package charts/${{ env.IMAGE_NAME }} --app-version=${VERSION} --version=${VERSION} --destination=./charts
           tar --extract --file=charts/${{ env.IMAGE_NAME }}-${VERSION}.tgz ${{ env.IMAGE_NAME }}/Chart.yaml
 
