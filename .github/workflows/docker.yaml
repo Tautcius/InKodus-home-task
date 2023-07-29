@@ -104,7 +104,7 @@ jobs:
       - name: custom packaging
         run: |
           VERSION=${{ needs.bump-version.outputs.version }}
-          echo version is ${{ needs.bump-version.outputs.version }}
+          echo version is a ${{ needs.bump-version.outputs.version }}
           echo VERSion is $VERSION
       #     rm -rf .cr-release-packages
       #     mkdir -p .cr-release-packages
