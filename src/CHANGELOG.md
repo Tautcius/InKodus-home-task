@@ -2,6 +2,13 @@
 
 
 
+## v0.3.6 (2023-07-29)
+
+### Fix
+
+* fix: changed jobs dependency ([`1e2519e`](https://github.com/Tautcius/InKodus-home-task/commit/1e2519e3543231fbf907309bee61a2d02bd3d52f))
+
+
 ## v0.3.5 (2023-07-29)
 
 ### Fix
