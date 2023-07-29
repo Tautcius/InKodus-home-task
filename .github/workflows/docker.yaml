@@ -19,7 +19,7 @@ jobs:
       contents: write
     outputs:
       version: ${{ steps.semver.outputs.version }}
-      released: ${{ steps.semver.outputs.released }}
+      isReleased: ${{ steps.semver.outputs.released }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -33,9 +33,10 @@ jobs:
           directory: src
 
   build-and-push-image:
-    # if: ${{ needs.bump-version.outputs.release }} == 'true'
+    if: needs.bump-version.outputs.isReleased == 'true'
     runs-on: ubuntu-latest
-    needs: bump-version
+    needs:
+      - bump-version
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
       contents: read
@@ -77,9 +78,11 @@ jobs:
             ${{ env.REGISTRY }}/${{ env.OWNER_NAME }}/${{ env.IMAGE_NAME }}:${{ needs.bump-version.outputs.version }}
           labels: ${{ steps.meta.outputs.labels }}
   helm-rekease:
-    # if: ${{ needs.bump-version.outputs.release }} == 'true'
+    if: needs.bump-version.outputs.isReleased == 'true'
     runs-on: ubuntu-latest
-    needs: build-and-push-image
+    needs:
+      - bump-version
+      - build-and-push-image
     permissions:
       contents: write
     steps:
@@ -102,6 +105,7 @@ jobs:
         run: |
           VERSION=${{ needs.bump-version.outputs.version }}
           echo version is ${{ needs.bump-version.outputs.version }}
+          echo VERSion is $VERSION
       #     rm -rf .cr-release-packages
       #     mkdir -p .cr-release-packages
       #     helm package charts/inkodus-home-task --app-version=${VERSION} --version=${VERSION} --destination=.cr-release-packages
