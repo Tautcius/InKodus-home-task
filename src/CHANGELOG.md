@@ -2,6 +2,13 @@
 
 
 
+## v0.3.16 (2023-07-29)
+
+### Fix
+
+* fix: missed path ([`f97904c`](https://github.com/Tautcius/InKodus-home-task/commit/f97904cc0f1a79ec2fd17800bb5ac508e6aefeb2))
+
+
 ## v0.3.15 (2023-07-29)
 
 ### Fix
