@@ -18,4 +18,5 @@ COPY --from=builder /code .
 ENV PATH=/root/.local/bin:$PATH
 EXPOSE 80
 # Set the command to run the application
-CMD ["python", "src/main.py"]
+# CMD ["python", "src/main.py"]
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "80"]
