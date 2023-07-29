@@ -77,6 +77,19 @@ jobs:
             ${{ env.REGISTRY }}/${{ env.OWNER_NAME }}/${{ env.IMAGE_NAME }}:latest
             ${{ env.REGISTRY }}/${{ env.OWNER_NAME }}/${{ env.IMAGE_NAME }}:${{ needs.bump-version.outputs.version }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Update Image Version in the related HelmChart values.yaml
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          valueFile: "charts/inkodus-home-task/values.yaml"
+          propertyPath: "image.tag"
+          value: ${{ needs.bump-version.outputs.version }}
+          branch: main
+          # targetBranch: main
+          createPR: false
+          commitChange: true
+          message: "Update Image Version to ${{ needs.bump-version.outputs.version }}"
+
   helm-rekease:
     if: needs.bump-version.outputs.isReleased == 'true'
     runs-on: ubuntu-latest
@@ -95,11 +108,9 @@ jobs:
         uses: onlyutkarsh/patch-files-action@v1.0.1
         with:
           files: |
-            charts/inkodus-home-task/*.yaml
+            charts/inkodus-home-task/values.yaml
           patch-syntax: |
             = /image/tag => ${{ needs.bump-version.outputs.version }}
-            = /appVersion => $${{ needs.bump-version.outputs.version }}
-            = /version => ${{ needs.bump-version.outputs.version }}
 
       - name: Configure Git
         run: |
@@ -114,9 +125,10 @@ jobs:
       - name: custom packaging
         run: |
           VERSION=${{ needs.bump-version.outputs.version }}
-          rm -rf .cr-release-packages
-          mkdir -p .cr-release-packages
-          helm package charts/inkodus-home-task --app-version=${VERSION} --version=${VERSION} --destination=.cr-release-packages
+          # rm -rf .cr-release-packages
+          # mkdir -p .cr-release-packages
+          helm package charts/${{ env.IMAGE_NAME }} --app-version=${VERSION} --version=${VERSION} --destination=./charts
+          tar --extract --file=${{ env.IMAGE_NAME }}-${VERSION}.tgz ${{ env.IMAGE_NAME }}/Chart.yaml
 
       - name: Run chart-releaser
         # switch back to helm/chart-releaser-action if this contribution is ever merged
