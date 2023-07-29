@@ -2,6 +2,13 @@
 
 
 
+## v0.3.7 (2023-07-29)
+
+### Fix
+
+* fix: to new  helm realease job ([`f98616c`](https://github.com/Tautcius/InKodus-home-task/commit/f98616cc108e856ac6e0343cee6fbe46abeb504b))
+
+
 ## v0.3.6 (2023-07-29)
 
 ### Fix
