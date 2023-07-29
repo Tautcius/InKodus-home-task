@@ -2,6 +2,13 @@
 
 
 
+## v0.3.11 (2023-07-29)
+
+### Fix
+
+* fix: testing helm release ([`4f5c96d`](https://github.com/Tautcius/InKodus-home-task/commit/4f5c96d252f03270043f0bebfa0cbcb83b40a391))
+
+
 ## v0.3.10 (2023-07-29)
 
 ### Fix
