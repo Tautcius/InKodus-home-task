@@ -2,6 +2,13 @@
 
 
 
+## v0.3.14 (2023-07-29)
+
+### Fix
+
+* fix: test charts.yaml versions update ([`58e0067`](https://github.com/Tautcius/InKodus-home-task/commit/58e006704e40b53fe00655b75d83154ea13262b3))
+
+
 ## v0.3.13 (2023-07-29)
 
 ### Fix
