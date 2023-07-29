@@ -2,6 +2,19 @@
 
 
 
+## v0.3.4 (2023-07-29)
+
+### Fix
+
+* fix: update release pipeline ([`e5211f6`](https://github.com/Tautcius/InKodus-home-task/commit/e5211f68c8aa0edb73c60a12cb60203ca8cf3653))
+
+### Unknown
+
+* update action ([`53a8181`](https://github.com/Tautcius/InKodus-home-task/commit/53a81816b28a0a7aa2aec9e417129264ecf712ca))
+
+* working helm chart ([`76981bd`](https://github.com/Tautcius/InKodus-home-task/commit/76981bd538c87850313167811dac5f7b379e9a70))
+
+
 ## v0.3.3 (2023-07-29)
 
 ### Fix
