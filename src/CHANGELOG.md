@@ -2,6 +2,13 @@
 
 
 
+## v0.3.5 (2023-07-29)
+
+### Fix
+
+* fix: added premissions ([`297f607`](https://github.com/Tautcius/InKodus-home-task/commit/297f607a0fa98608cd18bbd3aa8ab1b1e550c424))
+
+
 ## v0.3.4 (2023-07-29)
 
 ### Fix
