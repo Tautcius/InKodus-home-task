@@ -104,16 +104,14 @@ jobs:
       - name: custom packaging
         run: |
           VERSION=${{ needs.bump-version.outputs.version }}
-          echo version is a ${{ needs.bump-version.outputs.version }}
-          echo VERSion is $VERSION
-      #     rm -rf .cr-release-packages
-      #     mkdir -p .cr-release-packages
-      #     helm package charts/inkodus-home-task --app-version=${VERSION} --version=${VERSION} --destination=.cr-release-packages
+          rm -rf .cr-release-packages
+          mkdir -p .cr-release-packages
+          helm package charts/inkodus-home-task --app-version=${VERSION} --version=${VERSION} --destination=.cr-release-packages
 
-      # - name: Run chart-releaser
-      #   # switch back to helm/chart-releaser-action if this contribution is ever merged
-      #   uses: askcloudarchitech/chart-releaser-action@skip-packaging-option
-      #   with:
-      #     skip_packaging: true
-      #   env:
-      #     CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Run chart-releaser
+        # switch back to helm/chart-releaser-action if this contribution is ever merged
+        uses: askcloudarchitech/chart-releaser-action@skip-packaging-option
+        with:
+          skip_packaging: true
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
