@@ -38,7 +38,7 @@ jobs:
           files: |
             charts/inkodus-home-task/*.yaml
           patch-syntax: |
-            = iamge/tag => ${{ steps.semver.outputs.version }}
+            = /image/tag => ${{ steps.semver.outputs.version }}
             = /appVersion => ${{ steps.semver.outputs.version }}
             = /version => ${{ steps.semver.outputs.version }}
 
