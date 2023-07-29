@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   inkodus-home-task:
   - apiVersion: v2
+    appVersion: 0.3.17
+    created: "2023-07-29T20:25:29.811782239Z"
+    description: A Helm chart for Kubernetes
+    digest: afa289066d01bd4c222d2a99b9e433ca5d83125182e7f2bef518127fe1ed91ca
+    name: inkodus-home-task
+    type: application
+    urls:
+    - https://github.com/Tautcius/InKodus-home-task/releases/download/inkodus-home-task-0.3.17/inkodus-home-task-0.3.17.tgz
+    version: 0.3.17
+  - apiVersion: v2
     appVersion: 0.3.13
     created: "2023-07-29T10:58:44.377159996Z"
     description: A Helm chart for Kubernetes
@@ -31,4 +41,4 @@ entries:
     urls:
     - https://github.com/Tautcius/InKodus-home-task/releases/download/inkodus-home-task-0.3.11/inkodus-home-task-0.3.11.tgz
     version: 0.3.11
-generated: "2023-07-29T10:58:44.377172696Z"
+generated: "2023-07-29T20:25:29.811806041Z"
