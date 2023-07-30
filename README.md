@@ -13,9 +13,9 @@
         - Build temporary docker and scan it with Trivy
         - Scan your helm with datree/Polaris
 6. Install Argo-cd on k3s/minikube/microk8s/kind/eks etc. ✅
-7. Install your helm with Argo-cd (it needs to be managed by git and not Argo-Ul, try app-of-app pattern)
-8. Push new commit and verify your CI-CD
-9. Install the following application with ApplicationSet : Polaris dashboard , goldilocks
+7. Install your helm with Argo-cd (it needs to be managed by git and not Argo-Ul, try app-of-app pattern) ✅
+8. Push new commit and verify your CI-CD ✅
+9. Install the following application with ApplicationSet : Polaris dashboard , goldilocks ✅
 
 Bonus.
  - Be creative and share/implement something cool that you familiar with it
