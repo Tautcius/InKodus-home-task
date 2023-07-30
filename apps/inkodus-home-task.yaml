@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: inkodus-home-task
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://tautcius.github.io/InKodus-home-task
+    chart: inkodus-home-task
+    targetRevision: 0.*.*
+    helm:
+  destination:
+    namespace: inkodus
+    name: in-cluster
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true
+      - ApplyOutOfSyncOnly=true
+      - PrunePropagationPolicy=orphan
+      - Replace=true
