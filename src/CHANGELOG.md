@@ -2,6 +2,17 @@
 
 
 
+## v0.4.0 (2023-07-30)
+
+### Documentation
+
+* docs: added requirements and cleanup action. ([`25c2491`](https://github.com/Tautcius/InKodus-home-task/commit/25c2491e189813f2090cea465ef94980853696f0))
+
+### Feature
+
+* feat: testing workflow ([`0683cc8`](https://github.com/Tautcius/InKodus-home-task/commit/0683cc8018e210e40724e40178e706442020d012))
+
+
 ## v0.3.17 (2023-07-29)
 
 ### Fix
