@@ -12,8 +12,14 @@ spec:
     chart: inkodus-home-task
     targetRevision: 0.*.*
     helm:
-      valueFiles:
-        - apps/inkodus-home-task/values.yaml
+      values: |
+        ingress:
+          hosts:
+            - host: inkodus.tagai.uk
+          tls:
+            - secretName: inkodus-tls
+              hosts:
+                - inkodus.tagai.uk
   destination:
     namespace: inkodus
     name: in-cluster
