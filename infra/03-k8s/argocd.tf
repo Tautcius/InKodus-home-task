@@ -23,7 +23,4 @@ resource "helm_release" "argocd" {
   values = [
     file("${path.module}/argocd/values.yaml")
   ]
-  depends_on = [
-    data.aws_eks_cluster.this
-  ]
 }
