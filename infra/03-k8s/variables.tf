@@ -25,21 +25,12 @@ variable "role" {
   type        = string
 }
 
-variable "username_oci" {
-  description = "oci username"
-  type        = string
-}
+# variable "username_oci" {
+#   description = "oci username"
+#   type        = string
+# }
 
-variable "password_oci" {
-  description = "oci password"
-  type        = string
-}
-variable "rds_master_username" {
-  description = "DB master username"
-  type        = string
-}
-variable "rds_master_password" {
-  description = "DB master password"
-  type        = string
-  sensitive   = true
-}
+# variable "password_oci" {
+#   description = "oci password"
+#   type        = string
+# }

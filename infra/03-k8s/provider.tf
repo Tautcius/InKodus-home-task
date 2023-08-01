@@ -31,7 +31,7 @@ provider "aws" {
   region = var.aws_region
   /* profile = "BTT-service" */
   assume_role {
-    role_arn     = "arn:aws:iam::414102262202:role/prod_terraform_role"
+    role_arn     = var.role
     session_name = "Terraform_remote"
   }
   default_tags {
@@ -63,11 +63,11 @@ provider "helm" {
     cluster_ca_certificate = base64decode(data.aws_eks_cluster.default.certificate_authority[0].data)
     token                  = data.aws_eks_cluster_auth.default.token
   }
-  registry {
-    url      = "oci://ghcr.io"
-    username = var.username_oci
-    password = var.password_oci
-  }
+  # registry {
+  #   url      = "oci://ghcr.io"
+  #   username = var.username_oci
+  #   password = var.password_oci
+  # }
 }
 provider "kubectl" {
   apply_retry_count      = 15
