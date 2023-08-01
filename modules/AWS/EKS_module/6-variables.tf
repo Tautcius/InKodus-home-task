@@ -39,3 +39,7 @@ variable "enable_irsa" {
   type        = bool
   default     = true
 }
+
+variable "tags" {
+
+}
