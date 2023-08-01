@@ -20,7 +20,7 @@ module "eks" {
   node_groups = {
     general = {
       capacity_type  = "ON_DEMAND"
-      instance_types = ["t3a.medium"]
+      instance_types = ["t3a.small"]
       scaling_config = {
         desired_size = 1
         max_size     = 3
