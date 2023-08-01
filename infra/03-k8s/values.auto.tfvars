@@ -1,6 +1,6 @@
-env        = "prod"
-aws_region = "eu-central-1"
-role_arn   = "arn:aws:iam::414102262202:role/prod_terraform_role"
+env        = "test"
+aws_region = "eu-north-1"
+role       = "arn:aws:iam::368770947224:role/test_terraform_role"
 ownership  = "Tagai"
 # eks_cluster_name = "k8s-cluster"
 

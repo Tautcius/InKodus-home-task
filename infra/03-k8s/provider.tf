@@ -3,17 +3,13 @@ terraform {
     organization = "Tagai"
 
     workspaces {
-      name = "04-k8s-prod-grafana"
+      name = "03-k8s"
     }
   }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = ">= 4.62.0"
-    }
-    postgresql = {
-      source  = "cyrilgdn/postgresql"
-      version = "1.19.0"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
@@ -43,7 +39,7 @@ provider "aws" {
       Environment = var.env
       Terraform   = "true"
       CreatedBy   = var.ownership
-      Project     = "Grafana"
+      Project     = "InKodus"
     }
   }
 }

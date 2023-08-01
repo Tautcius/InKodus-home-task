@@ -20,7 +20,7 @@ variable "aws_region" {
   type        = string
 }
 
-variable "role_arn" {
+variable "role" {
   description = "AWS IAM role"
   type        = string
 }
