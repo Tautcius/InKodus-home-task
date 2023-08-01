@@ -13,7 +13,7 @@ spec:
     targetRevision: 0.*.*
     helm:
       valueFiles:
-        - inkodus-home-task/values.yaml
+        - apps/inkodus-home-task/values.yaml
   destination:
     namespace: inkodus
     name: in-cluster
