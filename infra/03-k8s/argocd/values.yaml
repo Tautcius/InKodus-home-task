@@ -1,18 +1,18 @@
-# start
-global:
-  affinity:
-    nodeAffinity: {}
-controller:
-  affinity:
-    nodeAffinity: {}
+redis-ha:
+  enabled: false
 
-repoServer:
-  affinity:
-    nodeAffinity: {}
+controller:
+  replicas: 1
 
 server:
-  affinity:
-    nodeAffinity: {}
-redis:
-  affinity:
-    nodeAffinity: {}
+  autoscaling:
+    enabled: false
+    # minReplicas: 2
+
+repoServer:
+  autoscaling:
+    enabled: false
+    # minReplicas: 1
+
+applicationSet:
+  replicaCount: 1
