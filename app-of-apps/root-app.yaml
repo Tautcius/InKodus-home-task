@@ -6,9 +6,8 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    name: ""
+    name: in-cluster
     namespace: default
-    server: "https://kubernetes.default.svc"
   source:
     path: apps/
     repoURL: https://github.com/Tautcius/InKodus-home-task.git

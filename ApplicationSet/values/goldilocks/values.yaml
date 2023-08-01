@@ -1,0 +1,14 @@
+dashboard:
+  enabled: true
+  ingressClassName: nginx
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod-cloudflare
+    kubernetes.io/tls-acme: "true"
+    # nginx.ingress.kubernetes.io/ssl-passthrough: "true".
+    # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+  hosts:
+    - host: goldilocks.tagai.uk
+  tls:
+    - secretName: goldilocks-tls
+      hosts:
+        - goldilocks.tagai.uk
