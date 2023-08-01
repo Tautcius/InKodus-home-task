@@ -25,12 +25,7 @@ variable "role" {
   type        = string
 }
 
-# variable "username_oci" {
-#   description = "oci username"
-#   type        = string
-# }
-
-# variable "password_oci" {
-#   description = "oci password"
-#   type        = string
-# }
+variable "domain" {
+  description = "Cloudflare Domain"
+  type        = string
+}

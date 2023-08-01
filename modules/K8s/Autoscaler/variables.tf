@@ -17,3 +17,7 @@ variable "openid_provider_arn" {
   description = "IAM Openid Connect Provider ARN"
   type        = string
 }
+variable "aws_region" {
+  description = "AWS region"
+  type        = string
+}

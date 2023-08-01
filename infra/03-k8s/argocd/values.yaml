@@ -7,8 +7,20 @@ controller:
 server:
   autoscaling:
     enabled: false
-    # minReplicas: 2
-
+  ingress:
+    enabled: true
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod-cloudflare
+      kubernetes.io/tls-acme: "true"
+      nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    ingressClassName: "nginx"
+    hosts:
+      - argocd.tagai.uk
+    tls:
+      - secretName: argo-cd-tls-secret
+        hosts:
+          - argocd.tagai.uk
 repoServer:
   autoscaling:
     enabled: false

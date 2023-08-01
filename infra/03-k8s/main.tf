@@ -50,6 +50,7 @@ module "autoscaler" {
   source                         = "../../modules/K8s/Autoscaler"
   env                            = var.env
   eks_name                       = local.eks_name
+  aws_region                     = "eu-north-1"
   cluster_autoscaler_helm_verion = "9.29.1"
   openid_provider_arn            = local.openid_provider_arn
   depends_on = [
@@ -73,15 +74,16 @@ module "cert-manager" {
     module.autoscaler
   ]
 }
-module "traefik" {
-  source              = "../../modules/K8s/Traefik"
-  env                 = var.env
-  eks_name            = local.eks_name
-  openid_provider_arn = local.openid_provider_arn
-  traefik_helm_verion = "23.2.0"
-  traefik_values      = file("${path.module}/traefik/values.yaml")
+
+module "nginx-controller" {
+  source = "../../modules/K8s/Nginx-ingress-controller"
+  #  source                    = "../Nginx-ingress-controller"
+  env                       = var.env
+  eks_name                  = local.eks_name
+  openid_provider_arn       = local.openid_provider_arn
+  nginx_ingress_helm_verion = "4.7.1"
+  nginx_values              = file("${path.module}/nginx/values.yaml")
   depends_on = [
-    module.autoscaler,
-    module.cert-manager
+    module.autoscaler
   ]
 }

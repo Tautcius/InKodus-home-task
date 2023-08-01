@@ -11,6 +11,10 @@ terraform {
       source  = "hashicorp/aws"
       version = ">= 4.62.0"
     }
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = ">= 3.32.0"
+    }
     kubernetes = {
       source  = "hashicorp/kubernetes"
       version = ">= 2.19.0"
@@ -44,6 +48,9 @@ provider "aws" {
   }
 }
 
+provider "cloudflare" {
+  api_token = var.cloudflare_api_token
+}
 data "aws_eks_cluster" "default" {
   name = local.eks_name
 }

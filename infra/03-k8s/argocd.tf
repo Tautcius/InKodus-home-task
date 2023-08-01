@@ -13,14 +13,14 @@
 #     argocd_notifications_enabled = false
 #   }
 # }
-# resource "helm_release" "argocd" {
-#   name             = "argo-cd"
-#   repository       = "https://argoproj.github.io/argo-helm"
-#   chart            = "argo-cd"
-#   version          = "5.42.1"
-#   namespace        = "argo-cd"
-#   create_namespace = true
-#   values = [
-#     file("${path.module}/argocd/values.yaml")
-#   ]
-# }
+resource "helm_release" "argocd" {
+  name             = "argocd"
+  repository       = "https://argoproj.github.io/argo-helm"
+  chart            = "argo-cd"
+  version          = "5.42.1"
+  namespace        = "argocd"
+  create_namespace = true
+  values = [
+    file("${path.module}/argocd/values.yaml")
+  ]
+}
