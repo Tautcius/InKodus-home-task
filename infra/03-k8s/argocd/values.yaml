@@ -1,1 +1,18 @@
 # start
+global:
+  affinity:
+    nodeAffinity: {}
+controller:
+  affinity:
+    nodeAffinity: {}
+
+repoServer:
+  affinity:
+    nodeAffinity: {}
+
+server:
+  affinity:
+    nodeAffinity: {}
+redis:
+  affinity:
+    nodeAffinity: {}
