@@ -8,7 +8,7 @@ variable "eks_name" {
   type        = string
 }
 
-variable "nginx_ingress_helm_verion" {
+variable "traefik_helm_verion" {
   description = "Cluster Autoscaler Helm verion"
   type        = string
 }
@@ -18,7 +18,7 @@ variable "openid_provider_arn" {
   type        = string
 }
 
-variable "nginx_values" {
+variable "traefik_values" {
   description = "nginx values"
   type        = string
 }

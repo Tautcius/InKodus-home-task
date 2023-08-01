@@ -74,12 +74,12 @@ module "cert-manager" {
   ]
 }
 module "traefik" {
-  source                    = "../../modules/K8s/Traefik"
-  env                       = var.env
-  eks_name                  = local.eks_name
-  openid_provider_arn       = local.openid_provider_arn
-  nginx_ingress_helm_verion = "23.2.0"
-  nginx_values              = file("${path.module}/traefik/values.yaml")
+  source              = "../../modules/K8s/Traefik"
+  env                 = var.env
+  eks_name            = local.eks_name
+  openid_provider_arn = local.openid_provider_arn
+  traefik_helm_verion = "23.2.0"
+  traefik_values      = file("${path.module}/traefik/values.yaml")
   depends_on = [
     module.autoscaler,
     module.cert-manager
