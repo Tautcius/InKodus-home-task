@@ -3,7 +3,7 @@ terraform {
     organization = "Tagai"
 
     workspaces {
-      name = "01-vpc-prod-grafana"
+      name = "01-vpc"
     }
   }
   required_providers {
@@ -31,7 +31,7 @@ terraform {
 provider "aws" {
   region = var.aws_region
   assume_role {
-    role_arn = "arn:aws:iam::414102262202:role/prod_terraform_role"
+    role_arn = var.role
   }
 
   default_tags {
@@ -39,7 +39,7 @@ provider "aws" {
       Environment = var.env
       Terraform   = "true"
       CreatedBy   = var.ownership
-      Project     = "Grafana"
+      Project     = "InKodus"
     }
   }
 }

@@ -1,4 +1,5 @@
 vpc_cird         = "10.0.0.0/16"
 env              = "prod"
-aws_region       = "eu-central-1"
+aws_region       = "eu-north-1"
 eks_cluster_name = "cluster"
+role             = "arn:aws:iam::368770947224:role/test_terraform_role"

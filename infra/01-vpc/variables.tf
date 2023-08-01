@@ -21,3 +21,8 @@ variable "env" {
   description = "Enviroment tag"
   type        = string
 }
+
+variable "role" {
+  description = "Role to assume"
+  type        = string
+}
