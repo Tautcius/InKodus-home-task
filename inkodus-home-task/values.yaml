@@ -1,0 +1,10 @@
+ingress:
+  hosts:
+    - host: inkodus.tagai.uk
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - secretName: inkodus-tls
+      hosts:
+        - inkodus.tagai.uk

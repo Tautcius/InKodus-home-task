@@ -11,6 +11,9 @@ spec:
     repoURL: https://tautcius.github.io/InKodus-home-task
     chart: inkodus-home-task
     targetRevision: 0.*.*
+    helm:
+      valueFiles:
+        - inkodus-home-task/values.yaml
   destination:
     namespace: inkodus
     name: in-cluster
