@@ -2,6 +2,17 @@
 
 
 
+## v0.4.1 (2023-08-01)
+
+### Documentation
+
+* docs: Added explanation ([`4d04e4b`](https://github.com/Tautcius/InKodus-home-task/commit/4d04e4b13b3efda13a589202b852a1bbbb33942b))
+
+### Fix
+
+* fix: updated ingress ([`7748532`](https://github.com/Tautcius/InKodus-home-task/commit/77485325648113386c450cbd81952f057c84425f))
+
+
 ## v0.4.0 (2023-07-30)
 
 ### Documentation
