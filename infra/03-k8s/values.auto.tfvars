@@ -1,0 +1,23 @@
+env        = "prod"
+aws_region = "eu-central-1"
+role_arn   = "arn:aws:iam::414102262202:role/prod_terraform_role"
+ownership  = "Tagai"
+# eks_cluster_name = "k8s-cluster"
+
+#eks_cluster_name    = "cluster"
+#eks_cluster_version = 1.25
+#domain              = "teltonika.lt"
+# organization               = "Tagai"
+# cluster_instance_type      = ["t3.medium"]
+# cluster_size_min           = 0
+# cluster_size_max           = 5
+# cluster_size_desired       = 3
+# cluster_autoscaler_version = "v1.25.0"
+# vpc_cird                   = "192.168.0.0/16"
+# org_id                     = 113101838846
+# eks_user                   = "t.bujauskas@gmail.com"
+# rds_engine                 = "postgres"
+# rds_engine_version         = "14.6"
+# rds_instance_class         = "db.t3.medium"
+# rds_db_name                = "test_db"
+# rds_db_username            = "admin_test_db"
