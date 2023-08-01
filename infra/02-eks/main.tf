@@ -8,21 +8,21 @@ locals {
 }
 data "tfe_outputs" "vpc" {
   organization = "BTT"
-  workspace    = "01-vpc-${var.env}-grafana"
+  workspace    = "01-vpc"
 }
 
 module "eks" {
-  source      = "modules/AWS/EKS_module?ref=eks-v0.0.3"
-  eks_version = "1.26"
-  env         = "prod"
+  source      = "../../modules/AWS/EKS_module"
+  eks_version = "1.27"
+  env         = "test"
   eks_name    = "cluster"
   subnet_ids  = local.private_subnets
   node_groups = {
     general = {
       capacity_type  = "ON_DEMAND"
-      instance_types = ["t3a.large"]
+      instance_types = ["t3a.medium"]
       scaling_config = {
-        desired_size = 2
+        desired_size = 1
         max_size     = 3
         min_size     = 1
       }

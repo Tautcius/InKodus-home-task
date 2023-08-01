@@ -18,3 +18,8 @@ variable "ownership" {
 #   type        = string
 #   default     = "test.lt"
 # }
+
+variable "role" {
+  description = "Role to assume"
+  type        = string
+}
