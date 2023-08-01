@@ -5,7 +5,7 @@ variable "env" {
 
 variable "ownership" {
   description = "Infrastructure is created by Tagai"
-  default     = "Skaylink"
+  default     = "Tagai"
   type        = string
 }
 
