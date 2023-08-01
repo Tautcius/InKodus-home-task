@@ -7,7 +7,7 @@ locals {
   subnets          = concat(local.private_subnets)
 }
 data "tfe_outputs" "vpc" {
-  organization = "BTT"
+  organization = "Tagai"
   workspace    = "01-vpc"
 }
 
