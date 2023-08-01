@@ -1,5 +1,5 @@
 locals {
-  # cluster_name     = "${var.env_tag}-${var.eks_cluster_name}"
+  cluster_name     = "${var.env_tag}-${var.eks_cluster_name}"
   vpc_id           = data.tfe_outputs.vpc.values.vpc_id
   private_subnets  = data.tfe_outputs.vpc.values.vpc_private_subnets
   public_subnets   = data.tfe_outputs.vpc.values.vpc_public_subnets
@@ -27,6 +27,10 @@ module "eks" {
         min_size     = 1
       }
     }
+  }
+  tags = {
+    "k8s.io/cluster-autoscaler/${local.cluster_name}" = "owned"
+    "k8s.io/cluster-autoscaler/enabled"               = "true"
   }
 }
 
