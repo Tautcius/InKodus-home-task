@@ -2,6 +2,19 @@
 
 
 
+## v0.5.0 (2023-08-09)
+
+### Feature
+
+* feat: somethin new ([`3b37182`](https://github.com/Tautcius/InKodus-home-task/commit/3b37182b7278084b901a1e003f97bfc744e8a1d0))
+
+### Unknown
+
+* Merge pull request #3 from Tautcius/feat/new
+
+feat: somethin new ([`ef2d3d5`](https://github.com/Tautcius/InKodus-home-task/commit/ef2d3d5667e47f332d8b614a96c15488e9b1514b))
+
+
 ## v0.4.1 (2023-08-01)
 
 ### Documentation
